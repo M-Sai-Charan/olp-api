@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("olpApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b68a60df49c156ab5d418710c446799d9c81e9a")]
 [assembly: System.Reflection.AssemblyProductAttribute("olpApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("olpApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

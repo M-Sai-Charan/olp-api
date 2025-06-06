@@ -31,3 +31,4 @@ C:\Users\mi\olpApi\obj\Debug\net8.0\refint\olpApi.dll
 C:\Users\mi\olpApi\obj\Debug\net8.0\olpApi.pdb
 C:\Users\mi\olpApi\obj\Debug\net8.0\olpApi.genruntimeconfig.cache
 C:\Users\mi\olpApi\obj\Debug\net8.0\ref\olpApi.dll
+C:\Users\mi\olpApi\obj\Debug\net8.0\olpApi.sourcelink.json
