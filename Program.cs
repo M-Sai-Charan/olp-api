@@ -1,5 +1,10 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.Extensions.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
 
+// Add services to the container
 builder.Services.AddControllers();
 
 builder.Services.AddCors(options =>
@@ -8,15 +13,24 @@ builder.Services.AddCors(options =>
     {
         policy.WithOrigins(
             "http://localhost:4200",
-            "https://m-sai-charan.github.io",
-            "https://your-api-name.onrender.com" // Replace later with your Render URL
+            "https://m-sai-charan.github.io"
         )
         .AllowAnyHeader()
         .AllowAnyMethod();
     });
 });
 
+// Configure forwarded headers to support HTTPS redirection behind reverse proxies (like Azure)
+builder.Services.Configure<ForwardedHeadersOptions>(options =>
+{
+    options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+    options.KnownNetworks.Clear();
+    options.KnownProxies.Clear();
+});
+
 var app = builder.Build();
+
+app.UseForwardedHeaders();
 
 app.UseHttpsRedirection();
 
