@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "cczgUDnen6fRNeYvAGdq98NB/YVBNzwwWC1NzeT8GdQ=",
+  "Source": "olpApi",
+  "BasePath": "_content/olpApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

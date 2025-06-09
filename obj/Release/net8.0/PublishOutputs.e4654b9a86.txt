@@ -1,0 +1,17 @@
+C:\Users\mi\olpApi\publish\olpApi.exe
+C:\Users\mi\olpApi\publish\publish\web.config
+C:\Users\mi\olpApi\publish\appsettings.Development.json
+C:\Users\mi\olpApi\publish\appsettings.json
+C:\Users\mi\olpApi\publish\publish\appsettings.Development.json
+C:\Users\mi\olpApi\publish\publish\appsettings.json
+C:\Users\mi\olpApi\publish\publish\olpApi.deps.json
+C:\Users\mi\olpApi\publish\publish\olpApi.runtimeconfig.json
+C:\Users\mi\olpApi\publish\olpApi.dll
+C:\Users\mi\olpApi\publish\olpApi.deps.json
+C:\Users\mi\olpApi\publish\olpApi.runtimeconfig.json
+C:\Users\mi\olpApi\publish\olpApi.pdb
+C:\Users\mi\olpApi\publish\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\mi\olpApi\publish\Microsoft.OpenApi.dll
+C:\Users\mi\olpApi\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\mi\olpApi\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\mi\olpApi\publish\Swashbuckle.AspNetCore.SwaggerUI.dll
