@@ -11,7 +11,7 @@ namespace olpApi.Models
         public string Groom { get; set; } = string.Empty;
         public string ContactNumber { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
-        public string Status { get; set; } = 'New';
+        public string Status { get; set; } = "New";
         public string Location { get; set; } = string.Empty;
         public string Comments { get; set; } = string.Empty;
         public string Source { get; set; } = string.Empty;
