@@ -11,10 +11,11 @@ namespace olpApi.Models
         public string Groom { get; set; } = string.Empty;
         public string ContactNumber { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
+        public string Status { get; set; } = 'New';
         public string Location { get; set; } = string.Empty;
         public string Comments { get; set; } = string.Empty;
         public string Source { get; set; } = string.Empty;
-        public DateTime Timestamp { get; set; }
+        public DateTime CreatedOn { get; set; }
 
         public string CalledBy { get; set; } = string.Empty;
         public string CallDate { get; set; } = string.Empty;
