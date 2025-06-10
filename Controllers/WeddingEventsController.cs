@@ -38,6 +38,8 @@ namespace olpApi.Controllers
                 return BadRequest("Invalid data.");
 
             newEvent.Id = currentId++;
+            var year = DateTime.UtcNow.Year;
+            newEvent.OlpId = $"{newEvent.Id.ToString("D3")}OLP{year}";
             newEvent.CreatedOn = DateTime.UtcNow;
             newEvent.UpdatedOn = DateTime.UtcNow;
 
