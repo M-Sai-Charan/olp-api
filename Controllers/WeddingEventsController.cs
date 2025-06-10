@@ -38,7 +38,8 @@ namespace olpApi.Controllers
                 return BadRequest("Invalid data.");
 
             newEvent.Id = currentId++;
-            newEvent.Timestamp = DateTime.UtcNow;
+            newEvent.CreatedOn = DateTime.UtcNow;
+            newEvent.UpdatedOn = DateTime.UtcNow;
 
             Events.Add(newEvent);
 
@@ -54,7 +55,9 @@ namespace olpApi.Controllers
                 return NotFound();
 
             updatedEvent.Id = existing.Id;
-            updatedEvent.Timestamp = existing.Timestamp;
+            updatedEvent.CreatedOn = existing.CreatedOn;
+            updatedEvent.UpdatedOn = DateTime.UtcNow;
+
             var index = Events.IndexOf(existing);
             Events[index] = updatedEvent;
 

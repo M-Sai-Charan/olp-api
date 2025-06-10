@@ -15,7 +15,9 @@ namespace olpApi.Models
         public string Location { get; set; } = string.Empty;
         public string Comments { get; set; } = string.Empty;
         public string Source { get; set; } = string.Empty;
+
         public DateTime CreatedOn { get; set; }
+        public DateTime UpdatedOn { get; set; }
 
         public EventNameDetail CalledBy { get; set; } = new();
         public string CallDate { get; set; } = string.Empty;
@@ -31,6 +33,7 @@ namespace olpApi.Models
         public string EventLocation { get; set; } = string.Empty;
         public EventNameDetail EventTime { get; set; } = new();
         public string EventGuests { get; set; } = string.Empty;
+        public string EventBudget { get; set; } = string.Empty;
     }
 
     public class EventNameDetail
@@ -39,7 +42,8 @@ namespace olpApi.Models
         public string Name { get; set; } = string.Empty;
         public string Value { get; set; } = string.Empty;
     }
-     public class EventStatusDetail
+
+    public class EventStatusDetail
     {
         public string Name { get; set; } = string.Empty;
         public string Value { get; set; } = string.Empty;
