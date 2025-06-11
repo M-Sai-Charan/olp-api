@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text.Json;
 using olpApi.Models;
 
 namespace olpApi.Controllers
@@ -10,21 +12,38 @@ namespace olpApi.Controllers
     [Route("api/[controller]")]
     public class WeddingEventsController : ControllerBase
     {
-        private static readonly List<WeddingEvent> Events = new();
-        private static int currentId = 1;
+        private static readonly string FilePath = Path.Combine("App_Data", "wedding-events.json");
+
+        private List<WeddingEvent> LoadEvents()
+        {
+            if (!System.IO.File.Exists(FilePath)) return new List<WeddingEvent>();
+            var json = System.IO.File.ReadAllText(FilePath);
+            return string.IsNullOrWhiteSpace(json)
+                ? new List<WeddingEvent>()
+                : JsonSerializer.Deserialize<List<WeddingEvent>>(json);
+        }
+
+        private void SaveEvents(List<WeddingEvent> events)
+        {
+            var json = JsonSerializer.Serialize(events, new JsonSerializerOptions { WriteIndented = true });
+            Directory.CreateDirectory(Path.GetDirectoryName(FilePath));
+            System.IO.File.WriteAllText(FilePath, json);
+        }
 
         // GET: api/WeddingEvents
         [HttpGet]
         public IActionResult GetAll()
         {
-            return Ok(Events);
+            var events = LoadEvents();
+            return Ok(events);
         }
 
         // GET: api/WeddingEvents/5
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            var ev = Events.FirstOrDefault(e => e.Id == id);
+            var events = LoadEvents();
+            var ev = events.FirstOrDefault(e => e.Id == id);
             if (ev == null)
                 return NotFound();
             return Ok(ev);
@@ -37,13 +56,15 @@ namespace olpApi.Controllers
             if (newEvent == null)
                 return BadRequest("Invalid data.");
 
-            newEvent.Id = currentId++;
-            var year = DateTime.UtcNow.Year;
-            newEvent.OlpId = $"{newEvent.Id.ToString("D3")}OLP{year}";
+            var events = LoadEvents();
+            int newId = events.Count > 0 ? events.Max(e => e.Id) + 1 : 1;
+            newEvent.Id = newId;
+            newEvent.OlpId = $"{newId.ToString("D3")}OLP{DateTime.UtcNow.Year}";
             newEvent.CreatedOn = DateTime.UtcNow;
             newEvent.UpdatedOn = DateTime.UtcNow;
 
-            Events.Add(newEvent);
+            events.Add(newEvent);
+            SaveEvents(events);
 
             return CreatedAtAction(nameof(GetById), new { id = newEvent.Id }, newEvent);
         }
@@ -52,7 +73,8 @@ namespace olpApi.Controllers
         [HttpPut("{id}")]
         public IActionResult Update(int id, [FromBody] WeddingEvent updatedEvent)
         {
-            var existing = Events.FirstOrDefault(e => e.Id == id);
+            var events = LoadEvents();
+            var existing = events.FirstOrDefault(e => e.Id == id);
             if (existing == null)
                 return NotFound();
 
@@ -60,8 +82,9 @@ namespace olpApi.Controllers
             updatedEvent.CreatedOn = existing.CreatedOn;
             updatedEvent.UpdatedOn = DateTime.UtcNow;
 
-            var index = Events.IndexOf(existing);
-            Events[index] = updatedEvent;
+            var index = events.IndexOf(existing);
+            events[index] = updatedEvent;
+            SaveEvents(events);
 
             return Ok(updatedEvent);
         }
@@ -70,8 +93,7 @@ namespace olpApi.Controllers
         [HttpDelete("clear")]
         public IActionResult ClearAll()
         {
-            Events.Clear();
-            currentId = 1;
+            SaveEvents(new List<WeddingEvent>());
             return Ok(new { message = "All events cleared." });
         }
     }
