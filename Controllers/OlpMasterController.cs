@@ -43,6 +43,29 @@ namespace olpApi.Controllers
                     new() { Id = 2, Name = "Afternoon", Value = "afternoon" },
                     new() { Id = 3, Name = "Evening", Value = "evening" },
                     new() { Id = 4, Name = "Night", Value = "night" }
+                },
+                OlpAssignTeams = new List<EventNameDetail>
+                {
+                    new() { Id = 1, Name = "Steve", Value = "photographer" },
+                    new() { Id = 4, Name = "Max", Value = "photographer" },
+                    new() { Id = 4, Name = "Hazel", Value = "photographer" },
+                    new() { Id = 4, Name = "Warner", Value = "photographer" },
+                    new() { Id = 4, Name = "Smith", Value = "editor" },
+                    new() { Id = 4, Name = "Pollard", Value = "editor" },
+                    new() { Id = 2, Name = "Pooran", Value = "editor" },
+                    new() { Id = 4, Name = "Gayle", Value = "editor" },
+                    new() { Id = 4, Name = "Ferguson", Value = "lightman" },
+                    new() { Id = 4, Name = "Markram", Value = "lightman" },
+                    new() { Id = 4, Name = "Narine", Value = "lightman" },
+                    new() { Id = 4, Name = "Rashid", Value = "lightman" },
+                    new() { Id = 4, Name = "Archer", Value = "droneoperator" },
+                    new() { Id = 4, Name = "Kane", Value = "droneoperator" },
+                    new() { Id = 3, Name = "Williams", Value = "droneoperator" },
+                    new() { Id = 4, Name = "Daniel", Value = "droneoperator" },
+                    new() { Id = 1, Name = "Bob", Value = "videographer" },
+                    new() { Id = 4, Name = "Charlie", Value = "videographer" },
+                    new() { Id = 4, Name = "Eva", Value = "videographer" },
+                    new() { Id = 4, Name = "Alice", Value = "videographer" }
                 }
             };
 
