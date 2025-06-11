@@ -64,7 +64,7 @@ namespace olpApi.Controllers
                     new() { Id = 16, Name = "Daniel", Value = "droneoperator" },
                     new() { Id = 17, Name = "Bob", Value = "videographer" },
                     new() { Id = 18, Name = "Charlie", Value = "videographer" },
-                    new() { Id = 19, Name = "Eva", Value = "videographer" },
+                    new() { Id = 19, Name = "Stephen", Value = "videographer" },
                     new() { Id = 20, Name = "Alice", Value = "videographer" }
                 }
             };
