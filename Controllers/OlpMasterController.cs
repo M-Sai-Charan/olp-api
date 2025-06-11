@@ -47,25 +47,25 @@ namespace olpApi.Controllers
                 OlpAssignTeams = new List<EventNameDetail>
                 {
                     new() { Id = 1, Name = "Steve", Value = "photographer" },
-                    new() { Id = 4, Name = "Max", Value = "photographer" },
-                    new() { Id = 4, Name = "Hazel", Value = "photographer" },
+                    new() { Id = 2, Name = "Max", Value = "photographer" },
+                    new() { Id = 3, Name = "Hazel", Value = "photographer" },
                     new() { Id = 4, Name = "Warner", Value = "photographer" },
-                    new() { Id = 4, Name = "Smith", Value = "editor" },
-                    new() { Id = 4, Name = "Pollard", Value = "editor" },
-                    new() { Id = 2, Name = "Pooran", Value = "editor" },
-                    new() { Id = 4, Name = "Gayle", Value = "editor" },
-                    new() { Id = 4, Name = "Ferguson", Value = "lightman" },
-                    new() { Id = 4, Name = "Markram", Value = "lightman" },
-                    new() { Id = 4, Name = "Narine", Value = "lightman" },
-                    new() { Id = 4, Name = "Rashid", Value = "lightman" },
-                    new() { Id = 4, Name = "Archer", Value = "droneoperator" },
-                    new() { Id = 4, Name = "Kane", Value = "droneoperator" },
-                    new() { Id = 3, Name = "Williams", Value = "droneoperator" },
-                    new() { Id = 4, Name = "Daniel", Value = "droneoperator" },
-                    new() { Id = 1, Name = "Bob", Value = "videographer" },
-                    new() { Id = 4, Name = "Charlie", Value = "videographer" },
-                    new() { Id = 4, Name = "Eva", Value = "videographer" },
-                    new() { Id = 4, Name = "Alice", Value = "videographer" }
+                    new() { Id = 5, Name = "Smith", Value = "editor" },
+                    new() { Id = 6, Name = "Pollard", Value = "editor" },
+                    new() { Id = 7, Name = "Pooran", Value = "editor" },
+                    new() { Id = 8, Name = "Gayle", Value = "editor" },
+                    new() { Id = 9, Name = "Ferguson", Value = "lightman" },
+                    new() { Id = 10, Name = "Markram", Value = "lightman" },
+                    new() { Id = 11, Name = "Narine", Value = "lightman" },
+                    new() { Id = 12, Name = "Rashid", Value = "lightman" },
+                    new() { Id = 13, Name = "Archer", Value = "droneoperator" },
+                    new() { Id = 14, Name = "Kane", Value = "droneoperator" },
+                    new() { Id = 15, Name = "Williams", Value = "droneoperator" },
+                    new() { Id = 16, Name = "Daniel", Value = "droneoperator" },
+                    new() { Id = 17, Name = "Bob", Value = "videographer" },
+                    new() { Id = 18, Name = "Charlie", Value = "videographer" },
+                    new() { Id = 19, Name = "Eva", Value = "videographer" },
+                    new() { Id = 20, Name = "Alice", Value = "videographer" }
                 }
             };
 
