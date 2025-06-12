@@ -24,6 +24,7 @@ namespace olpApi.Models
         public EventStatusDetail CallStatus { get; set; } = new();
 
         public List<EventDetail> Events { get; set; } = new();
+        public string TeamStatus { get; set; } = string.Empty;
     }
 
     public class EventDetail
@@ -34,8 +35,16 @@ namespace olpApi.Models
         public EventNameDetail EventTime { get; set; } = new();
         public string EventGuests { get; set; } = string.Empty;
         public string EventBudget { get; set; } = string.Empty;
+        public List<EventTeamMember> EventTeams { get; set; } = new();
     }
 
+    public class EventTeamMember
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Value { get; set; } = string.Empty;
+    }
+    
     public class EventNameDetail
     {
         public int Id { get; set; }
