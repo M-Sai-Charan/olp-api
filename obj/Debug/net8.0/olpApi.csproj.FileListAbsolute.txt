@@ -37,3 +37,8 @@ C:\Users\mi\olpApi\bin\Debug\net8.0\publish\appsettings.Development.json
 C:\Users\mi\olpApi\bin\Debug\net8.0\publish\appsettings.json
 C:\Users\mi\olpApi\bin\Debug\net8.0\publish\olpApi.deps.json
 C:\Users\mi\olpApi\bin\Debug\net8.0\publish\olpApi.runtimeconfig.json
+C:\Users\mi\olpApi\bin\Debug\net8.0\publish\publish\web.config
+C:\Users\mi\olpApi\bin\Debug\net8.0\publish\publish\appsettings.Development.json
+C:\Users\mi\olpApi\bin\Debug\net8.0\publish\publish\appsettings.json
+C:\Users\mi\olpApi\bin\Debug\net8.0\publish\publish\olpApi.deps.json
+C:\Users\mi\olpApi\bin\Debug\net8.0\publish\publish\olpApi.runtimeconfig.json

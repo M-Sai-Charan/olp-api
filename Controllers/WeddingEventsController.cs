@@ -15,7 +15,9 @@ namespace olpApi.Controllers
         private static List<WeddingEvent> Events = new();
         private static int currentId = 1;
 
-        private static readonly string dataFilePath = Path.Combine(Directory.GetCurrentDirectory(), "App_Data", "wedding-events.json");
+       private static readonly string dataFilePath = Path.Combine(
+    AppDomain.CurrentDomain.GetData("DataDirectory")?.ToString() ?? ".", "wedding-events.json");
+
 
         static WeddingEventsController()
         {
@@ -86,30 +88,31 @@ namespace olpApi.Controllers
         // File Persistence Methods
         // ------------------------
 
-        private static void SaveToFile()
-        {
-            try
-            {
-                var directory = Path.GetDirectoryName(dataFilePath);
-                if (!Directory.Exists(directory))
-                    Directory.CreateDirectory(directory);
+private static void SaveToFile()
+{
+    try
+    {
+        var directory = Path.GetDirectoryName(dataFilePath);
+        if (!string.IsNullOrEmpty(directory) && !Directory.Exists(directory))
+            Directory.CreateDirectory(directory);
 
-                var json = JsonSerializer.Serialize(Events, new JsonSerializerOptions { WriteIndented = true });
-                File.WriteAllText(dataFilePath, json);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error saving file: " + ex.Message);
-            }
-        }
+        var json = JsonSerializer.Serialize(Events, new JsonSerializerOptions { WriteIndented = true });
+        System.IO.File.WriteAllText(dataFilePath, json);
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine("Error saving file: " + ex.Message);
+    }
+}
+
 
         private static void LoadFromFile()
         {
             try
             {
-                if (File.Exists(dataFilePath))
+                if (System.IO.File.Exists(dataFilePath))
                 {
-                    var json = File.ReadAllText(dataFilePath);
+                    var json = System.IO.File.ReadAllText(dataFilePath);
                     var loadedEvents = JsonSerializer.Deserialize<List<WeddingEvent>>(json);
                     if (loadedEvents != null)
                     {
