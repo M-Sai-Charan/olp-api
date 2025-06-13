@@ -67,6 +67,20 @@ namespace olpApi.Controllers
                     new() { Id = 19, Name = "Stephene", Value = "videographer" },
                     new() { Id = 20, Name = "Alice", Value = "videographer" }
                 }
+                OlpInventories = new List<EventNameDetail>
+                {
+                    new()  { Id: 1, Name: 'Canon EOS R5', Value: 'camera' },
+                    new()  { Id: 2, Name: 'Nikon Z9', Value: 'camera' },
+                    new()  { Id: 3, Name: 'Sony A7S III', Value: 'camera' },
+                    new()  { Id: 4, Name: 'Manfrotto Tripod', Value: 'tripod' },
+                    new()  { Id: 5, Name: 'Benro Tripod', Value: 'tripod' },
+                    new()  { Id: 6, Name: 'Godox LED Panel', Value: 'lighting' },
+                    new()  { Id: 7, Name: 'Aputure Light Storm', Value: 'lighting' },
+                    new()  { Id: 8, Name: 'DJI Mavic 3', Value: 'drone' },
+                    new()  { Id: 9, Name: 'DJI Air 2S', Value: 'drone' },
+                    new()  { Id: 10, Name: 'Zhiyun Crane 3S', Value: 'gimbal' },
+                    new()  { Id: 11, Name: 'DJI Ronin-S', Value: 'gimbal' }
+                }
             };
 
             return Ok(masterData);

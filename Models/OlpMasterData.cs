@@ -9,6 +9,7 @@ namespace olpApi.Models
         public List<EventNameDetail> Employees { get; set; } = new();
         public List<EventNameDetail> EventTimes { get; set; } = new();
         public List<EventNameDetail> OlpAssignTeams { get; set; } = new();
+        public List<EventNameDetail> OlpInventories { get; set; } = new();
     }
 
     public class DropdownItem
