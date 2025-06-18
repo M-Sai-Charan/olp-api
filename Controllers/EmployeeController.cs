@@ -57,20 +57,15 @@ namespace YourNamespace.Controllers
             existing.JoiningDate = updated.JoiningDate;
             existing.ExitDate = updated.ExitDate;
             existing.Role = updated.Role;
-            existing.Designation = updated.Designation;
-            existing.Department = updated.Department;
             existing.AllowedRoutes = updated.AllowedRoutes;
             existing.TeamId = updated.TeamId;
             existing.Status = updated.Status;
-            existing.ProfilePic = updated.ProfilePic;
             existing.Gender = updated.Gender;
             existing.Dob = updated.Dob;
             existing.Aadhar = updated.Aadhar;
             existing.Pan = updated.Pan;
             existing.BloodGroup = updated.BloodGroup;
             existing.EmergencyContact = updated.EmergencyContact;
-            existing.Notes = updated.Notes;
-            existing.Rating = updated.Rating;
             existing.LastUpdated = DateTime.UtcNow;
             existing.LastUpdatedBy = updated.LastUpdatedBy;
 
