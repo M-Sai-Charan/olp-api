@@ -18,14 +18,11 @@ namespace YourNamespace.Models
         public DateTime? ExitDate { get; set; }
 
         public string Role { get; set; }
-        public string Designation { get; set; }
-        public string Department { get; set; }
 
         public List<string> AllowedRoutes { get; set; } = new List<string>();
         public string TeamId { get; set; }
         public string Status { get; set; }
 
-        public string ProfilePic { get; set; }
         public string Gender { get; set; }
         public DateTime Dob { get; set; }
 
@@ -34,9 +31,6 @@ namespace YourNamespace.Models
         public string BloodGroup { get; set; }
 
         public EmergencyContact EmergencyContact { get; set; }
-
-        public string Notes { get; set; }
-        public double Rating { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public string CreatedBy { get; set; }
