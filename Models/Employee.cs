@@ -17,13 +17,13 @@ namespace YourNamespace.Models
         public DateTime JoiningDate { get; set; }
         public DateTime? ExitDate { get; set; }
 
-        public string Role { get; set; }
+        public EmployeeRole  Role { get; set; }
 
-        public List<string> AllowedRoutes { get; set; } = new List<string>();
-        public string TeamId { get; set; }
+        public List<EmployeeRoutes> AllowedRoutes { get; set; } = new List<string>();
+        public EmployeeTeam  TeamId { get; set; }
         public string Status { get; set; }
 
-        public string Gender { get; set; }
+        public EmployeeTeam  Gender { get; set; }
         public DateTime Dob { get; set; }
 
         public string Aadhar { get; set; }
@@ -43,5 +43,25 @@ namespace YourNamespace.Models
         public string Name { get; set; }
         public string Relation { get; set; }
         public string Phone { get; set; }
+    }
+
+    public class EmployeeTeam
+    {
+        public string Name { get; set; }
+        public string Value { get; set; }
+    }
+
+    public class EmployeeRoutes
+    {
+        public string Label { get; set; }
+        public string Icon { get; set; }
+        public string route { get; set; }
+    }
+
+     public class EmployeeRole
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
     }
 }
