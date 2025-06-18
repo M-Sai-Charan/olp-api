@@ -15,9 +15,13 @@ namespace YourNamespace.Controllers
         [HttpPost("create")]
         public IActionResult CreateEmployee([FromBody] Employee input)
         {
+            string today = DateTime.UtcNow.ToString("yyyyMMdd");
+            string prefix = "EMP";
+            int count = _employees.Count + 1;
+            string generatedPhotographerId = $"{prefix}-{today}-{count:D3}";
             var newEmployee = new Employee
             {
-                PhotographerId = input.PhotographerId,
+                PhotographerId = generatedPhotographerId,
                 Name = input.Name,
                 Email = input.Email,
                 Phone = input.Phone,
@@ -83,6 +87,13 @@ namespace YourNamespace.Controllers
         {
             var employee = _employees.FirstOrDefault(e => e.Id == id);
             return employee == null ? NotFound() : Ok(employee);
+        }
+
+        [HttpDelete("clear")]
+        public IActionResult ClearAllEmployees()
+        {
+            _employees.Clear();
+            return Ok(new { message = "All employee data has been cleared." });
         }
     }
 }
