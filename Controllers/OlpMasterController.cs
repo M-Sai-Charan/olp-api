@@ -80,6 +80,27 @@ namespace olpApi.Controllers
                     new()  { Id = 9, Name = "DJI Air 2S", Value = "drone" },
                     new()  { Id = 10, Name = "Zhiyun Crane 3S", Value = "gimbal" },
                     new()  { Id = 11, Name = "DJI Ronin-S", Value = "gimbal" }
+                },
+                Roles = new List<RoleMasterItem>
+                {
+                    new() { Id = "1", Name = "Super Admin", Description = "Full access to all modules and settings." },
+                    new() { Id = "2", Name = "Manager", Description = "Manages teams, clients, and budgets." },
+                    new() { Id = "3", Name = "Photographer", Description = "Access to dashboard and team assignments only." },
+                    new() { Id = "4", Name = "Editor", Description = "Access to dashboard and budget module for editing info." },
+                    new() { Id = "5", Name = "Inventory Manager", Description = "Responsible for managing equipment inventory." },
+                    new() { Id = "6", Name = "Client Manager", Description = "Handles client profiles and updates." },
+                    new() { Id = "7", Name = "Accountant", Description = "Manages invoices and budgets." },
+                    new() { Id = "8", Name = "HR", Description = "Manages users and employees." },
+                    new() { Id = "9", Name = "Drone Operator", Description = "Handles drone shoots and uploads aerial footage." },
+                    new() { Id = "10", Name = "Album Designer", Description = "Designs photo albums and handles client revision requests." },
+                    new() { Id = "11", Name = "Social Media Executive", Description = "Creates reels, posts, and manages social content." },
+                    new() { Id = "12", Name = "Marketing Manager", Description = "Plans promotions and generates leads via campaigns." },
+                    new() { Id = "13", Name = "Customer Support", Description = "Responds to client enquiries and feedback." },
+                    new() { Id = "14", Name = "Scheduler", Description = "Plans shoot dates, allocates teams, and manages conflicts." },
+                    new() { Id = "15", Name = "Backup Specialist", Description = "Ensures all media is backed up post-event securely." },
+                    new() { Id = "16", Name = "Lighting Assistant", Description = "Supports photographers with lighting setup and logistics." },
+                    new() { Id = "17", Name = "Creative Director", Description = "Oversees visual style and shoot direction for premium events." },
+                    new() { Id = "18", Name = "Post-Production Manager", Description = "Supervises editing, album design, and delivery timelines." }
                 }
             };
 
