@@ -13,17 +13,18 @@ namespace YourNamespace.Models
         public string Email { get; set; } = string.Empty;
         public string Phone { get; set; } = string.Empty;
         public string Address { get; set; } = string.Empty;
+        public string ProfilePic { get; set; } = string.Empty;
 
         public DateTime JoiningDate { get; set; }
         public DateTime? ExitDate { get; set; }
 
-        public EmployeeRole Role { get; set; } = new(); // Default to avoid null
+        public EmployeeRole Role { get; set; } = new();
 
         public List<EmployeeRoutes> AllowedRoutes { get; set; } = new();
         public EmployeeTeam TeamId { get; set; } = new();
         public string Status { get; set; } = "Active";
 
-        public EmployeeTeam Gender { get; set; } = new(); // Used as a value-label pair
+        public EmployeeTeam Gender { get; set; } = new();
         public DateTime Dob { get; set; }
 
         public string Aadhar { get; set; } = string.Empty;

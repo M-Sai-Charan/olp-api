@@ -39,7 +39,8 @@ namespace YourNamespace.Controllers
                 BloodGroup = input.BloodGroup,
                 EmergencyContact = input.EmergencyContact,
                 CreatedBy = input.CreatedBy,
-                LastUpdatedBy = input.CreatedBy
+                LastUpdatedBy = input.CreatedBy,
+                ProfilePic = input.ProfilePic
             };
 
             _employees.Add(newEmployee);
@@ -68,6 +69,7 @@ namespace YourNamespace.Controllers
             existing.Dob = updated.Dob;
             existing.Aadhar = updated.Aadhar;
             existing.Pan = updated.Pan;
+            existing.ProfilePic = updated.ProfilePic;
             existing.BloodGroup = updated.BloodGroup;
             existing.EmergencyContact = updated.EmergencyContact;
             existing.LastUpdated = DateTime.UtcNow;
